@@ -1,5 +1,5 @@
 const fs = require('fs');
-// const uuid = require('uuid');
+const uuid = require('./uuid');
 const path = require('path');
 
 
@@ -22,7 +22,7 @@ function addNewNote(title, text) {
     const newNote = {
         title,
         text,
-        id: Math.floor(Math.random()*1000000000),
+        id: uuid(),
 
     };
     fs.readFile(path.join(__dirname, "../db/db.json"), "utf8", (err, data) => {
