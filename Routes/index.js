@@ -1,8 +1,8 @@
 const express = require('express');
 const routesapi = require("./routesapi.js");
 
-const app = express();
+const router = require("express").Router();
 
-app.use('/notes', routesapi);
+router.use('/notes', routesapi);
 
-module.exports = app;
+module.exports = router;
