@@ -14,7 +14,7 @@ router.get("/", (req, res) => {
         });
     });
 
-    //POST Route
+    //POST Route updated
 
     router.post('/', (req, res) => {
         console.info(`${req.method} Request received to add note!`);
